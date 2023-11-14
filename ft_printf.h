@@ -6,7 +6,7 @@
 /*   By: mekherbo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:18:56 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/13 00:55:20 by mekherbo         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:13:18 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	ft_printf(cons char *format, ...);
 int	ft_print_percent(void);
 void	ft_putnbr(int nb);
 void	ft_putnbr_base_unsigned(unsigned long long nb, char *base);
-
+int	ft_nblen_u(unsigned int nb, int base);
 
 #endif
