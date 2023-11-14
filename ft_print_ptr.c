@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_d.c                                       :+:      :+:    :+:   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mekherbo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mekherbo <mekherbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/11 19:38:05 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/13 01:05:14 by mekherbo         ###   ########.fr       */
+/*   Created: 2023/11/13 00:36:10 by mekherbo          #+#    #+#             */
+/*   Updated: 2023/11/13 01:11:59 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-static int nb_len(int nb)
+static int	nb_len_ptr(uintptr_t nb)
 {
 	int	count;
 
 	count = 0;
-	if (nb < 0)
-	{
-		count++;
-		nb = -nb;
-	}
 	if (nb == 0)
 		return (1);
 	else
 	{
 		while (nb)
 		{
-			nb /= 10;
+			nb /= 16;
 			count++;
 		}
+
 	}
 	return (count);
 }
 
-int ft_print_int(va_list arg)
+int	ft_print_ptr(va_list arg)
 {
-	int	nb;
+	uintptr_t	ptr;
 
-	nb = va_arg(arg, int);
-	ft_putnbr(nb);
-	return (nb_len(nb));
+	ptr = va_arg(arg, uintptr_t);
+	if (ptr == 0)
+		return ((int)write(1, "(nil)", 5));
+	
 }
