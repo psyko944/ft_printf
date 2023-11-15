@@ -6,7 +6,7 @@
 /*   By: mekherbo <mekherbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 00:25:39 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/13 00:29:03 by mekherbo         ###   ########.fr       */
+/*   Updated: 2023/11/15 02:20:41 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int	ft_print_char(va_list arg)
 	char	c;
 
 	c = (char)va_arg(arg, int);
-	write(1 &c, 1);
+	write(1, &c, 1);
 	return (1);
 }

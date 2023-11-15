@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_print_hexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mekherbo <mekherbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 01:08:16 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/15 02:22:39 by mekherbo         ###   ########.fr       */
+/*   Created: 2023/11/15 01:47:12 by mekherbo          #+#    #+#             */
+/*   Updated: 2023/11/15 01:56:10 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_unsigned(va_list arg)
+int	ft_print_hexa(va_list arg, char flag)
 {
-	unsigned long	u_nb;
+	unsigned long	nb;
 
-	u_nb = va_arg(arg, unsigned long);
-	ft_putnbr_base_unsigned((unsigned long long)u_nb, "0123456789abcdef");
-	return (ft_nblen_u(u_nb));
+	nb = va_arg(arg, unsigned long);
+	if (flag == 'x')
+		ft_putnbr_base_unsigned(nb, "0123456789abcdef");
+	else if (flag == 'X')
+		ft_putnbr_base_unsigned(nb, "0123456789ABCDEF");
+	return (nb_len_u(nb));
 }

@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "limits.h"
+#include "ft_printf.h"
+#include <limits.h>
 int main()
 {
-	//printf("\nretour de valeur %d\n", printf("%s", "salut"));
-	printf("%d", INT_MAX + 1);
+	ft_printf("%d\n", INT_MAX)
+	printf("%d", INT_MAX);
 	return (0);
 }
