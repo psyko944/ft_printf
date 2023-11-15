@@ -1,14 +1,12 @@
 NAME = libftprintf.a 
 
-SRCS = srcs/main.c \
-srcs/ft_print_char.c \
+SRCS = srcs/ft_print_char.c \
 srcs/ft_print_int.c \
 srcs/ft_print_string.c \
 srcs/ft_print_ptr.c \
 srcs/ft_print_hexa.c \
 srcs/ft_print_unsigned.c \
 srcs/ft_printf.c \
-srcs/ft_print_percent.c \
 srcs/utils.c
 
 
@@ -36,7 +34,7 @@ CFLAGS = -Wall -Wextra -Werror
 OBJS = ${SRCS:.c=.o}
 
 $(NAME): $(OBJS)   
-		ar rc $(NAME) $(OBJS)
+		ar -rcs $(NAME) $(OBJS)
 		
 #$(OBJS) : $(HEADER)
 
