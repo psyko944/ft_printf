@@ -6,7 +6,7 @@
 /*   By: mekherbo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 18:30:40 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/15 18:34:52 by mekherbo         ###   ########.fr       */
+/*   Updated: 2023/11/15 23:43:12 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ static int	ft_parse(char flag, va_list arg)
 	else if (flag == 'x' || flag == 'X')
 		res = ft_print_hexa(arg, flag);
 	else if (flag == '%')
-	{
-		printf("test\n");
 		return ((int)write(1, "%", 1));
-	}
 	else
 		res = -1;
 	return (res);

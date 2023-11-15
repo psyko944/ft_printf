@@ -6,7 +6,7 @@
 /*   By: mekherbo <mekherbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:10:00 by mekherbo          #+#    #+#             */
-/*   Updated: 2023/11/15 19:07:05 by mekherbo         ###   ########.fr       */
+/*   Updated: 2023/11/15 23:19:09 by mekherbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_putnbr(int nb)
 
 int	ft_nblen_u(unsigned long nb, int base)
 {
-	unsigned long	len;
+	int	len;
 
 	len = 0;
 	if (nb == 0)
